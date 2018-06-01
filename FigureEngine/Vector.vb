@@ -1,4 +1,7 @@
-﻿Public Class Vector
+﻿Option Strict On
+Option Explicit On
+
+Public Class Vector
     Public Property X As Double
     Public Property Y As Double
 
@@ -46,7 +49,7 @@
     End Operator
 
     Public Shared Operator +(a As Point, b As Vector) As Point
-        Return New Point(a.X + b.X, a.Y + b.Y)
+        Return New Point(CType(a.X + b.X, Integer), CType(a.Y + b.Y, Integer))
     End Operator
 
     Public Shared Operator -(obj As Vector) As Vector
@@ -74,15 +77,15 @@
     End Operator
 
     Public Shared Narrowing Operator CType(obj As Vector) As Size
-        Return New Size(obj.X, obj.Y)
+        Return New Size(CType(obj.X, Integer), CType(obj.Y, Integer))
     End Operator
 
     Public Shared Narrowing Operator CType(obj As Vector) As Point
-        Return New Point(obj.X, obj.Y)
+        Return New Point(CType(obj.X, Integer), CType(obj.Y, Integer))
     End Operator
 
     Public Shared Narrowing Operator CType(obj As Vector) As PointF
-        Return New PointF(obj.X, obj.Y)
+        Return New PointF(CType(obj.X, Integer), CType(obj.Y, Integer))
     End Operator
 
     Public Shared Function DotProduct(a As Vector, b As Vector) As Double

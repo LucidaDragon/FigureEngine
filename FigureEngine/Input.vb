@@ -1,4 +1,7 @@
-﻿Public Class Input
+﻿Option Strict On
+Option Explicit On
+
+Public Class Input
     Public Shared PressedKeys As New List(Of Keys)
 
     Public Shared Sub KeyDown(key As Keys)

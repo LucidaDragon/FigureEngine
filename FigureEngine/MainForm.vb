@@ -1,7 +1,10 @@
-﻿Public Class MainForm
+﻿Option Strict On
+Option Explicit On
+
+Public Class MainForm
     Public Property Display As BitmapData
         Get
-            Return ScaleBox.Image
+            Return CType(ScaleBox.Image, BitmapData)
         End Get
         Set(value As BitmapData)
             ScaleBox.Image = value

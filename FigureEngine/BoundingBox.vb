@@ -1,4 +1,7 @@
-﻿Public Class BoundingBox
+﻿Option Strict On
+Option Explicit On
+
+Public Class BoundingBox
     Public Property SerializeBounds As EngineRectangle
         Get
             Return Bounds
@@ -67,7 +70,7 @@
         Return False
     End Function
 
-    Private Function Rotate(point As Point, center As Point, angle As Single) As Point
+    Private Function Rotate(point As Point, center As Point, angle As Double) As Point
         Return New Point(CInt(((point.X - center.X) * Math.Cos(Math.PI * (angle / 180))) - ((point.Y - center.Y) * Math.Sin(Math.PI * (angle / 180)))) + center.X, CInt(((point.Y - center.Y) * Math.Cos(Math.PI * (angle / 180))) + ((point.X - center.X) * Math.Sin(Math.PI * (angle / 180)))) + center.Y)
     End Function
 End Class

@@ -1,4 +1,7 @@
-﻿Public Class LineLib
+﻿Option Strict On
+Option Explicit On
+
+Public Class LineLib
     'Following code convert from C++
     'Original can be found at https://www.geeksforgeeks.org/check-if-two-given-line-segments-intersect/
 

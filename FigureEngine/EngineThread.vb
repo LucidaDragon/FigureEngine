@@ -1,4 +1,5 @@
 ﻿Option Strict On
+Option Explicit On
 
 Public Class EngineThread
     Inherits ComponentModel.BackgroundWorker

@@ -1,4 +1,7 @@
-﻿Public Class EngineRectangle
+﻿Option Strict On
+Option Explicit On
+
+Public Class EngineRectangle
     Public Property TopLeft As Vector
     Public Property TopRight As Vector
     Public Property BottomRight As Vector
@@ -7,7 +10,7 @@
     <Web.Script.Serialization.ScriptIgnore>
     Public ReadOnly Property Points As Point()
         Get
-            Return {TopLeft + Location, TopRight + Location, BottomRight + Location, BottomLeft + Location}
+            Return {CType(TopLeft + Location, Point), CType(TopRight + Location, Point), CType(BottomRight + Location, Point), CType(BottomLeft + Location, Point)}
         End Get
     End Property
     <Web.Script.Serialization.ScriptIgnore>
@@ -56,7 +59,7 @@
         BottomLeft = New Vector(rect.Left, rect.Bottom) - Location
     End Sub
 
-    Public Shared Function Distance(a As EngineRectangle, b As EngineRectangle)
+    Public Shared Function Distance(a As EngineRectangle, b As EngineRectangle) As Double
         Return (b.Center - a.Center).Magnitude
     End Function
 
@@ -69,6 +72,6 @@
     End Operator
 
     Public Shared Widening Operator CType(eRect As EngineRectangle) As Rectangle
-        Return New Rectangle(eRect.Location, eRect.BottomRight)
+        Return New Rectangle(CType(eRect.Location, Point), CType(eRect.BottomRight, Size))
     End Operator
 End Class

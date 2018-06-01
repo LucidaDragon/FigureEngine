@@ -1,4 +1,7 @@
-﻿Public Class DynamicBackground
+﻿Option Strict On
+Option Explicit On
+
+Public Class DynamicBackground
     Implements IDrawable
 
     Public Property Frames As New List(Of BitmapData)
@@ -21,6 +24,6 @@
             Position -= Length
         End While
 
-        g.DrawImage(Frames((Position / Length) * (Frames.Count - 1)), Location + offset)
+        g.DrawImage(Frames(CType((Position / Length) * (Frames.Count - 1), Integer)), Location + offset)
     End Sub
 End Class

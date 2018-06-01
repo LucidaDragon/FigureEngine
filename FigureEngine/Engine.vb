@@ -1,4 +1,7 @@
-﻿Public Class Engine
+﻿Option Strict On
+Option Explicit On
+
+Public Class Engine
     Public Property PhysicsObjects As New List(Of IPhysicsObject)
     Public Property RenderObjects As New List(Of IDrawable)
 
@@ -25,10 +28,10 @@
 
     Public Sub AddObject(obj As Object, Optional drawOnly As Boolean = False, Optional physicsOnly As Boolean = False)
         If TypeOf obj Is IPhysicsObject And Not drawOnly Then
-            PhysicsObjects.Add(obj)
+            PhysicsObjects.Add(CType(obj, IPhysicsObject))
         End If
         If TypeOf obj Is IDrawable And Not physicsOnly Then
-            RenderObjects.Add(obj)
+            RenderObjects.Add(CType(obj, IDrawable))
         End If
     End Sub
 

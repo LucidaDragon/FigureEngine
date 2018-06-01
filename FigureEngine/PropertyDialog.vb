@@ -1,4 +1,7 @@
-﻿Public Class PropertyDialog
+﻿Option Strict On
+Option Explicit On
+
+Public Class PropertyDialog
     Public Property EditObject As Object
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
