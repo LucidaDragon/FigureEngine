@@ -4,26 +4,31 @@
     Public Property BottomRight As Vector
     Public Property BottomLeft As Vector
 
-    Public ReadOnly Property Points As List(Of Point)
+    <Web.Script.Serialization.ScriptIgnore>
+    Public ReadOnly Property Points As Point()
         Get
-            Return New List(Of Point) From {TopLeft + Location, TopRight + Location, BottomRight + Location, BottomLeft + Location}
+            Return {TopLeft + Location, TopRight + Location, BottomRight + Location, BottomLeft + Location}
         End Get
     End Property
+    <Web.Script.Serialization.ScriptIgnore>
     Public ReadOnly Property Width As Double
         Get
             Return (TopRight - TopLeft).Magnitude
         End Get
     End Property
+    <Web.Script.Serialization.ScriptIgnore>
     Public ReadOnly Property Height As Double
         Get
             Return (BottomLeft - TopLeft).Magnitude
         End Get
     End Property
+    <Web.Script.Serialization.ScriptIgnore>
     Public ReadOnly Property Center As Vector
         Get
             Return New Vector(Width / 2, Height / 2)
         End Get
     End Property
+    <Web.Script.Serialization.ScriptIgnore>
     Public ReadOnly Property VectorRectangle As EngineRectangle
         Get
             Return New EngineRectangle(New Vector, TopLeft, TopRight, BottomRight, BottomLeft)

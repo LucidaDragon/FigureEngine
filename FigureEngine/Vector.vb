@@ -27,8 +27,8 @@
     End Sub
 
     Sub New(length As Integer, angle As Double)
-        X = Math.Sin((angle / 360) * (2 * Math.PI)) * length
-        Y = Math.Cos((angle / 360) * (2 * Math.PI)) * length
+        X = Math.Sin((angle / 180) * Math.PI) * length
+        Y = Math.Cos((angle / 180) * Math.PI) * length
     End Sub
 
     Sub New(start As Point, finish As Point)
@@ -90,6 +90,6 @@
     End Function
 
     Public Shared Function Angle(a As Vector, b As Vector) As Double
-        Return 360 * (Math.Acos(DotProduct(a, b) / (a.Magnitude * b.Magnitude)) / (2 * Math.PI))
+        Return 180 * (Math.Acos(DotProduct(a, b) / (a.Magnitude * b.Magnitude)) / Math.PI)
     End Function
 End Class

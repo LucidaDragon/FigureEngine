@@ -76,7 +76,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoundingBox.vb" />
+    <Compile Include="Camera.vb" />
+    <Compile Include="Engine.vb" />
     <Compile Include="EngineRectangle.vb" />
+    <Compile Include="EngineThread.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IDrawable.vb" />
+    <Compile Include="Input.vb" />
+    <Compile Include="IPhysicsObject.vb" />
+    <Compile Include="LineLib.vb" />
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -99,7 +109,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PhysicsObject.vb" />
     <Compile Include="PropertyDialog.Designer.vb">
       <DependentUpon>PropertyDialog.vb</DependentUpon>
     </Compile>
