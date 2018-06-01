@@ -24,3 +24,4 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\Figur
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.exe
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.xml
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.BitmapSerializeForm.resources

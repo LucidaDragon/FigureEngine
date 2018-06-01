@@ -77,6 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitmapData.vb" />
+    <Compile Include="BitmapSerializeForm.Designer.vb">
+      <DependentUpon>BitmapSerializeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BitmapSerializeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BoundingBox.vb" />
     <Compile Include="Camera.vb" />
     <Compile Include="DynamicBackground.vb" />
@@ -121,6 +127,9 @@
     <Compile Include="Vector.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BitmapSerializeForm.resx">
+      <DependentUpon>BitmapSerializeForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>

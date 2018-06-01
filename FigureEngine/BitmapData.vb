@@ -5,17 +5,18 @@ Public Class BitmapData
     Public Property Data As String
         Get
             Dim memStream As New IO.MemoryStream
-            Image.Save(memStream, Imaging.ImageFormat.Png)
-            Dim buf(CType(memStream.Length, Integer)) As Byte
-            memStream.Read(buf, 0, CType(memStream.Length, Integer))
-            Return Text.Encoding.UTF8.GetString(buf)
+            Try
+                Image.Save(memStream, Image.RawFormat)
+            Catch ex As Exception
+                Image.Save(memStream, Imaging.ImageFormat.Bmp)
+            End Try
+            Return Convert.ToBase64String(memStream.GetBuffer())
         End Get
         Set(value As String)
             Dim memStream As New IO.MemoryStream
-            Dim buf() As Byte
-            buf = Text.Encoding.UTF8.GetBytes(value)
-            memStream.Write(buf, 0, buf.Count)
-            Image = CType(Drawing.Image.FromStream(memStream), Bitmap)
+            Dim arr As Byte() = Convert.FromBase64String(value)
+            memStream.Write(arr, 0, arr.Length)
+            Image = New Bitmap(memStream)
         End Set
     End Property
     <Web.Script.Serialization.ScriptIgnore>

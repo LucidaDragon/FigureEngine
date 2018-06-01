@@ -73,8 +73,9 @@ Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitViewport()
-        AddLayer.Ready = True
+        'AddLayer().Ready = True
         'Dim eng As New Engine(Resolution.X, Resolution.Y)
+        BitmapSerializeForm.Show()
     End Sub
 
     Private Sub GameTimer_Tick(sender As Object, e As EventArgs) Handles GameTimer.Tick
