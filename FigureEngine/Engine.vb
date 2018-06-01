@@ -3,11 +3,11 @@
     Public Property RenderObjects As New List(Of IDrawable)
 
     <Web.Script.Serialization.ScriptIgnore>
-    Public Property RenderSurface As Bitmap
+    Public Property RenderSurface As BitmapData
         Get
             Return surface
         End Get
-        Set(value As Bitmap)
+        Set(value As BitmapData)
             surface = value
             Graphics = Graphics.FromImage(surface)
         End Set
@@ -23,11 +23,11 @@
         RenderSurface = New Bitmap(width, height)
     End Sub
 
-    Public Sub AddObject(obj As Object)
-        If TypeOf obj Is IPhysicsObject Then
+    Public Sub AddObject(obj As Object, Optional drawOnly As Boolean = False, Optional physicsOnly As Boolean = False)
+        If TypeOf obj Is IPhysicsObject And Not drawOnly Then
             PhysicsObjects.Add(obj)
         End If
-        If TypeOf obj Is IDrawable Then
+        If TypeOf obj Is IDrawable And Not physicsOnly Then
             RenderObjects.Add(obj)
         End If
     End Sub

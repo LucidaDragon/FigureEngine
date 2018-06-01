@@ -22,8 +22,10 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.ScaleBox = New System.Windows.Forms.PictureBox()
+        Me.GameTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.ScaleBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -36,6 +38,10 @@ Partial Class MainForm
         Me.ScaleBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ScaleBox.TabIndex = 0
         Me.ScaleBox.TabStop = False
+        '
+        'GameTimer
+        '
+        Me.GameTimer.Enabled = True
         '
         'MainForm
         '
@@ -55,4 +61,5 @@ Partial Class MainForm
     End Sub
 
     Friend WithEvents ScaleBox As PictureBox
+    Friend WithEvents GameTimer As Timer
 End Class

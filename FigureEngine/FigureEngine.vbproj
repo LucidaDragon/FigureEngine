@@ -76,8 +76,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitmapData.vb" />
     <Compile Include="BoundingBox.vb" />
     <Compile Include="Camera.vb" />
+    <Compile Include="DynamicBackground.vb" />
     <Compile Include="Engine.vb" />
     <Compile Include="EngineRectangle.vb" />
     <Compile Include="EngineThread.vb">
@@ -115,6 +117,7 @@
     <Compile Include="PropertyDialog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="StaticBackground.vb" />
     <Compile Include="Vector.vb" />
   </ItemGroup>
   <ItemGroup>

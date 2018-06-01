@@ -1,9 +1,9 @@
 ﻿Public Class MainForm
-    Public Property Display As Bitmap
+    Public Property Display As BitmapData
         Get
             Return ScaleBox.Image
         End Get
-        Set(value As Bitmap)
+        Set(value As BitmapData)
             ScaleBox.Image = value
             ScaleBox.Invalidate()
             Graphics = Graphics.FromImage(Display)
@@ -12,7 +12,7 @@
     Private Graphics As Graphics
 
     Public Property Threads As New List(Of EngineThread)
-    Public Property Layers As New List(Of Bitmap)
+    Public Property Layers As New List(Of BitmapData)
     Public Property Resolution As New Point(800, 600)
 
     Private Sub MainForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
@@ -66,5 +66,15 @@
             Graphics.DrawImage(Layers(i), 0, 0)
         Next
         ScaleBox.Invalidate()
+    End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        InitViewport()
+        AddLayer.Ready = True
+        'Dim eng As New Engine(Resolution.X, Resolution.Y)
+    End Sub
+
+    Private Sub GameTimer_Tick(sender As Object, e As EventArgs) Handles GameTimer.Tick
+        CombineLayers()
     End Sub
 End Class
