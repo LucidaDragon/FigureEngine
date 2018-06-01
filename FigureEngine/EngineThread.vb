@@ -1,4 +1,6 @@
-﻿Public Class EngineThread
+﻿Option Strict On
+
+Public Class EngineThread
     Inherits ComponentModel.BackgroundWorker
 
     Public Property Speed As Integer
@@ -31,12 +33,12 @@
             eng.Tick(delta)
             eng.Draw(delta)
 
-            ReportProgress(0, eng.RenderSurface)
+            ReportProgress(0, CType(eng.RenderSurface, Bitmap))
             Threading.Thread.Sleep(Speed)
         End While
     End Sub
 
     Private Sub Worker_ReportProgress(sender As Object, e As ComponentModel.ProgressChangedEventArgs) Handles MyBase.ProgressChanged
-        RaiseEvent UpdateUI(e.UserState, Layer)
+        RaiseEvent UpdateUI(CType(e.UserState, Bitmap), Layer)
     End Sub
 End Class
