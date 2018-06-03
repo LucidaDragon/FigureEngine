@@ -42,6 +42,7 @@ Partial Class MainForm
         'GameTimer
         '
         Me.GameTimer.Enabled = True
+        Me.GameTimer.Interval = 16
         '
         'MainForm
         '

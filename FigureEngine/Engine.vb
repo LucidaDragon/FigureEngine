@@ -4,6 +4,7 @@ Option Explicit On
 Public Class Engine
     Public Property PhysicsObjects As New List(Of IPhysicsObject)
     Public Property RenderObjects As New List(Of IDrawable)
+    Public Property Layer As Integer = 0
 
     <Web.Script.Serialization.ScriptIgnore>
     Public Property RenderSurface As BitmapData
@@ -26,6 +27,8 @@ Public Class Engine
         RenderSurface = New Bitmap(width, height)
     End Sub
 
+    Public Event UpdateUI(img As BitmapData, layer As Integer)
+
     Public Sub AddObject(obj As Object, Optional drawOnly As Boolean = False, Optional physicsOnly As Boolean = False)
         If TypeOf obj Is IPhysicsObject And Not drawOnly Then
             PhysicsObjects.Add(CType(obj, IPhysicsObject))
@@ -46,5 +49,6 @@ Public Class Engine
         For Each obj In RenderObjects
             obj.Draw(Graphics, Camera.Offset, deltaTime)
         Next
+        RaiseEvent UpdateUI(RenderSurface, Layer)
     End Sub
 End Class

@@ -16,6 +16,7 @@ Public Class MainForm
 
     Public Property Threads As New List(Of EngineThread)
     Public Property Layers As New List(Of BitmapData)
+    Public Property Engines As New List(Of Engine)
     Public Property Resolution As New Point(800, 600)
 
     Private Sub MainForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
@@ -70,9 +71,11 @@ Public Class MainForm
     End Sub
 
     Public Sub CombineLayers()
+        Graphics.Clear(Color.Black)
         For i As Integer = 0 To Layers.Count - 1
             Graphics.DrawImage(Layers(i), 0, 0)
         Next
+        Graphics.Flush()
         ScaleBox.Invalidate()
     End Sub
 
@@ -81,9 +84,32 @@ Public Class MainForm
 
         PropertyDialog.EditObject = Me
         PropertyDialog.ShowDialog()
+
+        Dim eng As New Engine(Resolution.X, Resolution.Y)
+        Layers.Add(Nothing)
+        eng.AddObject(New StaticBackground(My.Resources.DebugImage, New Point(0, 0)))
+        AddHandler eng.UpdateUI, AddressOf UpdateLayer
+        Engines.Add(eng)
     End Sub
 
     Private Sub GameTimer_Tick(sender As Object, e As EventArgs) Handles GameTimer.Tick
+        For Each engine In Engines
+            engine.Draw(GameTimer.Interval)
+        Next
+
         CombineLayers()
+
+        If Input.PressedKeys.Contains(Keys.W) Then
+            Camera.MoveCamera(0, 1)
+        End If
+        If Input.PressedKeys.Contains(Keys.A) Then
+            Camera.MoveCamera(-1, 0)
+        End If
+        If Input.PressedKeys.Contains(Keys.S) Then
+            Camera.MoveCamera(0, -1)
+        End If
+        If Input.PressedKeys.Contains(Keys.D) Then
+            Camera.MoveCamera(1, 0)
+        End If
     End Sub
 End Class
