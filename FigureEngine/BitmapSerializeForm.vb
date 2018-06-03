@@ -23,20 +23,19 @@ Public Class BitmapSerializeForm
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If IO.File.Exists(TextBox1.Text) Then
             Try
-                Dim json As New Web.Script.Serialization.JavaScriptSerializer
                 Dim data As BitmapData
 
                 If ComboBox1.SelectedIndex = 0 Then
                     data = CType(Image.FromFile(TextBox1.Text), BitmapData)
                 ElseIf ComboBox1.SelectedIndex = 1 Then
-                    data = json.Deserialize(Of BitmapData)(IO.File.ReadAllText(TextBox1.Text))
+                    data = Json.Deserialize(Of BitmapData)(IO.File.ReadAllText(TextBox1.Text))
                 Else
                     MsgBox("Unknown import type.", MsgBoxStyle.Exclamation)
                     Exit Sub
                 End If
 
                 If ComboBox2.SelectedIndex = 0 Then
-                    IO.File.WriteAllText(TextBox2.Text, json.Serialize(data))
+                    IO.File.WriteAllText(TextBox2.Text, Json.Serialize(data))
                 ElseIf ComboBox2.SelectedIndex = 1 Then
                     data.Image.Save(TextBox2.Text, Imaging.ImageFormat.Png)
                 ElseIf ComboBox2.SelectedIndex = 2 Then

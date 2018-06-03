@@ -91,9 +91,12 @@
     <Compile Include="EngineThread.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FileSystem.vb" />
     <Compile Include="IDrawable.vb" />
     <Compile Include="Input.vb" />
     <Compile Include="IPhysicsObject.vb" />
+    <Compile Include="ISerialize.vb" />
+    <Compile Include="Json.vb" />
     <Compile Include="LineLib.vb" />
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
@@ -123,6 +126,7 @@
     <Compile Include="PropertyDialog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SerializeBase.vb" />
     <Compile Include="StaticBackground.vb" />
     <Compile Include="Vector.vb" />
   </ItemGroup>

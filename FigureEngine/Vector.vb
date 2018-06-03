@@ -2,6 +2,8 @@
 Option Explicit On
 
 Public Class Vector
+    Implements ISerialize
+
     Public Property X As Double
     Public Property Y As Double
 
@@ -9,6 +11,14 @@ Public Class Vector
         Get
             Return Math.Sqrt((X ^ 2) + (Y ^ 2))
         End Get
+    End Property
+
+    Public Property FullName As String Implements ISerialize.FullName
+        Get
+            Return [GetType]().FullName
+        End Get
+        Set(value As String)
+        End Set
     End Property
 
     Sub New()
@@ -94,5 +104,13 @@ Public Class Vector
 
     Public Shared Function Angle(a As Vector, b As Vector) As Double
         Return 180 * (Math.Acos(DotProduct(a, b) / (a.Magnitude * b.Magnitude)) / Math.PI)
+    End Function
+
+    Public Function ToJsonString() As String Implements ISerialize.ToJsonString
+        Return Json.Serialize(Me)
+    End Function
+
+    Public Function FromJsonString(str As String) As ISerialize Implements ISerialize.FromJsonString
+        Return Json.Deserialize(Of Vector)(str)
     End Function
 End Class

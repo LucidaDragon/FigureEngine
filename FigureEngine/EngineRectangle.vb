@@ -2,6 +2,8 @@
 Option Explicit On
 
 Public Class EngineRectangle
+    Implements ISerialize
+
     Public Property TopLeft As Vector
     Public Property TopRight As Vector
     Public Property BottomRight As Vector
@@ -40,6 +42,14 @@ Public Class EngineRectangle
 
     Public Property Location As Vector
 
+    Public Property FullName As String Implements ISerialize.FullName
+        Get
+            Return [GetType]().FullName
+        End Get
+        Set(value As String)
+        End Set
+    End Property
+
     Sub New()
     End Sub
 
@@ -74,4 +84,12 @@ Public Class EngineRectangle
     Public Shared Widening Operator CType(eRect As EngineRectangle) As Rectangle
         Return New Rectangle(CType(eRect.Location, Point), CType(eRect.BottomRight, Size))
     End Operator
+
+    Public Function ToJsonString() As String Implements ISerialize.ToJsonString
+        Return Json.Serialize(Me)
+    End Function
+
+    Public Function FromJsonString(str As String) As ISerialize Implements ISerialize.FromJsonString
+        Return Json.Deserialize(Of EngineRectangle)(str)
+    End Function
 End Class

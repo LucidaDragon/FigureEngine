@@ -3,11 +3,20 @@ Option Explicit On
 
 Public Class DynamicBackground
     Implements IDrawable
+    Implements ISerialize
 
     Public Property Frames As New List(Of BitmapData)
     Public Property Length As Double
     Public Property Position As Double = 0
     Public Property Location As Point
+
+    Public Property FullName As String Implements ISerialize.FullName
+        Get
+            Return [GetType]().FullName
+        End Get
+        Set(value As String)
+        End Set
+    End Property
 
     Sub New()
     End Sub
@@ -26,4 +35,12 @@ Public Class DynamicBackground
 
         g.DrawImage(Frames(CType((Position / Length) * (Frames.Count - 1), Integer)), Location + offset)
     End Sub
+
+    Public Function ToJsonString() As String Implements ISerialize.ToJsonString
+        Return Json.Serialize(Me)
+    End Function
+
+    Public Function FromJsonString(str As String) As ISerialize Implements ISerialize.FromJsonString
+        Return Json.Deserialize(Of DynamicBackground)(str)
+    End Function
 End Class

@@ -52,12 +52,17 @@ Public Class MainForm
         Display = New Bitmap(Resolution.X, Resolution.Y)
     End Sub
 
-    Public Function AddLayer() As EngineThread
-        Threads.Add(New EngineThread(Threads.Count, 16))
-        Layers.Add(New Bitmap(Resolution.X, Resolution.Y))
-        AddHandler Threads.Last.UpdateUI, AddressOf UpdateLayer
-        Threads.Last.RunWorkerAsync(Resolution)
-        Return Threads.Last
+    Public Function AddLayer(Optional multithread As Boolean = True) As EngineThread
+        If multithread Then
+            Threads.Add(New EngineThread(Layers.Count, 16))
+            Layers.Add(New Bitmap(Resolution.X, Resolution.Y))
+            AddHandler Threads.Last.UpdateUI, AddressOf UpdateLayer
+            Threads.Last.RunWorkerAsync(Resolution)
+            Return Threads.Last
+        Else
+            Layers.Add(New Bitmap(Resolution.X, Resolution.Y))
+            Return Nothing
+        End If
     End Function
 
     Public Sub UpdateLayer(data As Bitmap, layer As Integer)
@@ -73,9 +78,9 @@ Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitViewport()
-        'AddLayer().Ready = True
-        'Dim eng As New Engine(Resolution.X, Resolution.Y)
-        BitmapSerializeForm.Show()
+
+        PropertyDialog.EditObject = Me
+        PropertyDialog.ShowDialog()
     End Sub
 
     Private Sub GameTimer_Tick(sender As Object, e As EventArgs) Handles GameTimer.Tick

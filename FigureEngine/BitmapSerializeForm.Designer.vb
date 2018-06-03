@@ -39,7 +39,7 @@ Partial Class BitmapSerializeForm
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Location = New System.Drawing.Point(332, 12)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(95, 22)
+        Me.Button1.Size = New System.Drawing.Size(95, 24)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "..."
         Me.Button1.UseVisualStyleBackColor = True
@@ -85,7 +85,7 @@ Partial Class BitmapSerializeForm
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Location = New System.Drawing.Point(332, 42)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(95, 22)
+        Me.Button2.Size = New System.Drawing.Size(95, 24)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "..."
         Me.Button2.UseVisualStyleBackColor = True

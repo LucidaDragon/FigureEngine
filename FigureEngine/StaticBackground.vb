@@ -3,9 +3,18 @@ Option Explicit On
 
 Public Class StaticBackground
     Implements IDrawable
+    Implements ISerialize
 
     Public Property Image As BitmapData
     Public Property Location As Point
+
+    Public Property FullName As String Implements ISerialize.FullName
+        Get
+            Return [GetType]().FullName
+        End Get
+        Set(value As String)
+        End Set
+    End Property
 
     Sub New()
     End Sub
@@ -23,4 +32,12 @@ Public Class StaticBackground
         Me.Image = image
         Me.Location = location
     End Sub
+
+    Public Function ToJsonString() As String Implements ISerialize.ToJsonString
+        Return Json.Serialize(Me)
+    End Function
+
+    Public Function FromJsonString(str As String) As ISerialize Implements ISerialize.FromJsonString
+        Return Json.Deserialize(Of StaticBackground)(str)
+    End Function
 End Class

@@ -2,6 +2,8 @@
 Option Explicit On
 
 Public Class BoundingBox
+    Implements ISerialize
+
     Public Property SerializeBounds As EngineRectangle
         Get
             Return Bounds
@@ -53,6 +55,14 @@ Public Class BoundingBox
         End Get
     End Property
 
+    Public Property FullName As String Implements ISerialize.FullName
+        Get
+            Return [GetType]().FullName
+        End Get
+        Set(value As String)
+        End Set
+    End Property
+
     Public Sub DrawBoundBox(g As Graphics, offset As Vector, pen As Pen)
         For Each elem In BoundingSides
             g.DrawLine(pen, elem(0) + offset, elem(1) + offset)
@@ -72,5 +82,13 @@ Public Class BoundingBox
 
     Private Function Rotate(point As Point, center As Point, angle As Double) As Point
         Return New Point(CInt(((point.X - center.X) * Math.Cos(Math.PI * (angle / 180))) - ((point.Y - center.Y) * Math.Sin(Math.PI * (angle / 180)))) + center.X, CInt(((point.Y - center.Y) * Math.Cos(Math.PI * (angle / 180))) + ((point.X - center.X) * Math.Sin(Math.PI * (angle / 180)))) + center.Y)
+    End Function
+
+    Public Function ToJsonString() As String Implements ISerialize.ToJsonString
+        Return Json.Serialize(Me)
+    End Function
+
+    Public Function FromJsonString(str As String) As ISerialize Implements ISerialize.FromJsonString
+        Return Json.Deserialize(Of BoundingBox)(str)
     End Function
 End Class
