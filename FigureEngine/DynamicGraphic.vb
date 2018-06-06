@@ -1,9 +1,11 @@
 ﻿Option Strict On
 Option Explicit On
+#Disable Warning IDE0037
 
-Public Class DynamicBackground
+Public Class DynamicGraphic
     Implements IDrawable
     Implements ISerialize
+    Implements IGraphic
 
     Public Property Frames As New List(Of BitmapData)
     Public Property Length As Double
@@ -16,6 +18,13 @@ Public Class DynamicBackground
         End Get
         Set(value As String)
         End Set
+    End Property
+
+    <Web.Script.Serialization.ScriptIgnore>
+    Public ReadOnly Property Type As GraphicType Implements IGraphic.Type
+        Get
+            Return GraphicType.DynamicGraphic
+        End Get
     End Property
 
     Sub New()
@@ -33,7 +42,11 @@ Public Class DynamicBackground
             Position -= Length
         End While
 
-        g.DrawImage(Frames(CType((Position / Length) * (Frames.Count - 1), Integer)), Location + offset)
+        If Frames.Count > 0 Then
+            If Frames(CType((Position / Length) * (Frames.Count - 1), Integer)) IsNot Nothing Then
+                g.DrawImage(Frames(CType((Position / Length) * (Frames.Count - 1), Integer)), Location + offset)
+            End If
+        End If
     End Sub
 
     Public Function ToJsonString() As String Implements ISerialize.ToJsonString
@@ -41,6 +54,6 @@ Public Class DynamicBackground
     End Function
 
     Public Function FromJsonString(str As String) As ISerialize Implements ISerialize.FromJsonString
-        Return Json.Deserialize(Of DynamicBackground)(str)
+        Return Json.Deserialize(Of DynamicGraphic)(str)
     End Function
 End Class

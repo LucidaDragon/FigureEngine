@@ -1,5 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
+#Disable Warning IDE0037
 
 Public Class Vector
     Implements ISerialize
@@ -7,6 +8,14 @@ Public Class Vector
     Public Property X As Double
     Public Property Y As Double
 
+    <Web.Script.Serialization.ScriptIgnore>
+    Public ReadOnly Property Angle As Double
+        Get
+            Return Math.Atan2(Y, X) * 180 / Math.PI
+        End Get
+    End Property
+
+    <Web.Script.Serialization.ScriptIgnore>
     Public ReadOnly Property Magnitude As Double
         Get
             Return Math.Sqrt((X ^ 2) + (Y ^ 2))
@@ -102,7 +111,7 @@ Public Class Vector
         Return (a.X * b.X) + (a.Y + b.Y)
     End Function
 
-    Public Shared Function Angle(a As Vector, b As Vector) As Double
+    Public Shared Function AngleTo(a As Vector, b As Vector) As Double
         Return 180 * (Math.Acos(DotProduct(a, b) / (a.Magnitude * b.Magnitude)) / Math.PI)
     End Function
 

@@ -15,7 +15,6 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\Figur
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FigureEngine.exe
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FigureEngine.pdb
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FigureEngine.xml
-C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.vbprojResolveAssemblyReference.cache
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.MainForm.resources
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.Resources.resources
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.PropertyDialog.resources
@@ -25,3 +24,5 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\Figur
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.xml
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.pdb
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.BitmapSerializeForm.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.vbprojResolveAssemblyReference.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.MetaGraphicEditor.resources

@@ -85,14 +85,18 @@
     </Compile>
     <Compile Include="BoundingBox.vb" />
     <Compile Include="Camera.vb" />
-    <Compile Include="DynamicBackground.vb" />
+    <Compile Include="CollisionGraphic.vb" />
+    <Compile Include="DynamicGraphic.vb" />
     <Compile Include="Engine.vb" />
     <Compile Include="EngineRectangle.vb" />
     <Compile Include="EngineThread.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="FileSystem.vb" />
+    <Compile Include="GraphicType.vb" />
+    <Compile Include="ICollide.vb" />
     <Compile Include="IDrawable.vb" />
+    <Compile Include="IGraphic.vb" />
     <Compile Include="Input.vb" />
     <Compile Include="IPhysicsObject.vb" />
     <Compile Include="ISerialize.vb" />
@@ -103,6 +107,13 @@
     </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaGraphic.vb" />
+    <Compile Include="MetaGraphicEditor.Designer.vb">
+      <DependentUpon>MetaGraphicEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MetaGraphicEditor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -127,7 +138,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SerializeBase.vb" />
-    <Compile Include="StaticBackground.vb" />
+    <Compile Include="StaticGraphic.vb" />
     <Compile Include="Vector.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaGraphicEditor.resx">
+      <DependentUpon>MetaGraphicEditor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -161,6 +175,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Figure.ico" />
+    <None Include="Resources\RedDot.png" />
+    <None Include="Resources\OrangeDot.png" />
     <None Include="Resources\Atari_8_bit_GTIA_NTSC_palette.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

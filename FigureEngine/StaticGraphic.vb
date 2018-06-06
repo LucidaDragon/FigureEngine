@@ -1,9 +1,11 @@
 ﻿Option Strict On
 Option Explicit On
+#Disable Warning IDE0037
 
-Public Class StaticBackground
+Public Class StaticGraphic
     Implements IDrawable
     Implements ISerialize
+    Implements IGraphic
 
     Public Property Image As BitmapData
     Public Property Location As Point
@@ -14,6 +16,13 @@ Public Class StaticBackground
         End Get
         Set(value As String)
         End Set
+    End Property
+
+    <Web.Script.Serialization.ScriptIgnore>
+    Public ReadOnly Property Type As GraphicType Implements IGraphic.Type
+        Get
+            Return GraphicType.StaticGraphic
+        End Get
     End Property
 
     Sub New()
@@ -38,6 +47,6 @@ Public Class StaticBackground
     End Function
 
     Public Function FromJsonString(str As String) As ISerialize Implements ISerialize.FromJsonString
-        Return Json.Deserialize(Of StaticBackground)(str)
+        Return Json.Deserialize(Of StaticGraphic)(str)
     End Function
 End Class

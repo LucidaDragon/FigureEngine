@@ -1,5 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
+#Disable Warning IDE0037
 
 Public Class FileSystem
     Public Shared Sub GenerateResource(obj As ISerialize, path As String)

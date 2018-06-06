@@ -1,5 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
+#Disable Warning IDE0037
 
 Public Class MainForm
     Public Property Display As BitmapData
@@ -82,12 +83,14 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitViewport()
 
+        MetaGraphicEditor.ShowDialog()
+
         PropertyDialog.EditObject = Me
         PropertyDialog.ShowDialog()
 
         Dim eng As New Engine(Resolution.X, Resolution.Y)
         Layers.Add(Nothing)
-        eng.AddObject(New StaticBackground(My.Resources.DebugImage, New Point(0, 0)))
+        eng.AddObject(New StaticGraphic(My.Resources.DebugImage, New Point(0, 0)))
         AddHandler eng.UpdateUI, AddressOf UpdateLayer
         Engines.Add(eng)
     End Sub
@@ -99,16 +102,16 @@ Public Class MainForm
 
         CombineLayers()
 
-        If Input.PressedKeys.Contains(Keys.W) Then
+        If Input.Query({Keys.W, Keys.Up}) Then
             Camera.MoveCamera(0, 1)
         End If
-        If Input.PressedKeys.Contains(Keys.A) Then
+        If Input.Query({Keys.A, Keys.Left}) Then
             Camera.MoveCamera(-1, 0)
         End If
-        If Input.PressedKeys.Contains(Keys.S) Then
+        If Input.Query({Keys.S, Keys.Right}) Then
             Camera.MoveCamera(0, -1)
         End If
-        If Input.PressedKeys.Contains(Keys.D) Then
+        If Input.Query({Keys.D, Keys.Right}) Then
             Camera.MoveCamera(1, 0)
         End If
     End Sub

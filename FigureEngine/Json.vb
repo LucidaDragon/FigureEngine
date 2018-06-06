@@ -1,5 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
+#Disable Warning IDE0037
 
 Public Class Json
     Private Shared json As New Web.Script.Serialization.JavaScriptSerializer With {
