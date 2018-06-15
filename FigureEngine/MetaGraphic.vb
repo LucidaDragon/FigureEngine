@@ -111,6 +111,15 @@ Public Class MetaGraphic
             Me.Image = image
             Me.Data = data
         End Sub
+
+        Public Function GetValue(name As String) As Vector
+            For Each dat In Data
+                If dat.Name = name Then
+                    Return dat.Data
+                End If
+            Next
+            Return Nothing
+        End Function
     End Class
 
     Public Class MetaData

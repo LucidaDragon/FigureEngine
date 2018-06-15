@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation.vb" />
     <Compile Include="BitmapData.vb" />
     <Compile Include="BitmapSerializeForm.Designer.vb">
       <DependentUpon>BitmapSerializeForm.vb</DependentUpon>
