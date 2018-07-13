@@ -1,0 +1,13 @@
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEAnimation.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEAnimation.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEAnimation.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEBase.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEBase.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEBase.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.vbprojResolveAssemblyReference.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.Resources.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.vbproj.GenerateResource.Cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.vbproj.CoreCompileInputs.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.pdb

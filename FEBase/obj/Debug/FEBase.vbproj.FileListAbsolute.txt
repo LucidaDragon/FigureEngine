@@ -1,0 +1,9 @@
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\bin\Debug\FEBase.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\bin\Debug\FEBase.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\bin\Debug\FEBase.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.Resources.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.vbproj.GenerateResource.Cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.vbproj.CoreCompileInputs.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.pdb

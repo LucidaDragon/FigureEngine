@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FigureEngine", "FigureEngine\FigureEngine.vbproj", "{2849C852-5937-40B5-A097-34F626BA01CF}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FigureEngine Old", "FigureEngine\FigureEngine Old.vbproj", "{2849C852-5937-40B5-A097-34F626BA01CF}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FEAnimation", "FEAnimsLib\FEAnimation.vbproj", "{846D04C6-87BC-478B-AF0C-D32CB311E507}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FEPackaging", "FEPackageLib\FEPackaging.vbproj", "{F25914AE-F6FA-45E9-8615-B0C74A4CE3C6}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FEBase", "FEBase\FEBase.vbproj", "{F682F12A-A180-4C14-A7EC-C6926D3E4968}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FEForms", "FEForms\FEForms.vbproj", "{6DF51293-1430-4C2E-A53E-6F0298D14B6E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FEDebug", "FEDebug\FEDebug.vbproj", "{ED717291-EEEE-4A66-9215-95DA35F8A772}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{2849C852-5937-40B5-A097-34F626BA01CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2849C852-5937-40B5-A097-34F626BA01CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2849C852-5937-40B5-A097-34F626BA01CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{846D04C6-87BC-478B-AF0C-D32CB311E507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846D04C6-87BC-478B-AF0C-D32CB311E507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846D04C6-87BC-478B-AF0C-D32CB311E507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846D04C6-87BC-478B-AF0C-D32CB311E507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25914AE-F6FA-45E9-8615-B0C74A4CE3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25914AE-F6FA-45E9-8615-B0C74A4CE3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25914AE-F6FA-45E9-8615-B0C74A4CE3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25914AE-F6FA-45E9-8615-B0C74A4CE3C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F682F12A-A180-4C14-A7EC-C6926D3E4968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F682F12A-A180-4C14-A7EC-C6926D3E4968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F682F12A-A180-4C14-A7EC-C6926D3E4968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F682F12A-A180-4C14-A7EC-C6926D3E4968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DF51293-1430-4C2E-A53E-6F0298D14B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF51293-1430-4C2E-A53E-6F0298D14B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF51293-1430-4C2E-A53E-6F0298D14B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DF51293-1430-4C2E-A53E-6F0298D14B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED717291-EEEE-4A66-9215-95DA35F8A772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED717291-EEEE-4A66-9215-95DA35F8A772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED717291-EEEE-4A66-9215-95DA35F8A772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED717291-EEEE-4A66-9215-95DA35F8A772}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

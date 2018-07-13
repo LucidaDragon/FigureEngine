@@ -4,34 +4,30 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2849C852-5937-40B5-A097-34F626BA01CF}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>FigureEngine.My.MyApplication</StartupObject>
-    <RootNamespace>FigureEngine</RootNamespace>
-    <AssemblyName>FigureEngine</AssemblyName>
+    <ProjectGuid>{F682F12A-A180-4C14-A7EC-C6926D3E4968}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FEBase</RootNamespace>
+    <AssemblyName>FEBase</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>FigureEngine.xml</DocumentationFile>
+    <DocumentationFile>FEBase.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>FigureEngine.xml</DocumentationFile>
+    <DocumentationFile>FEBase.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,16 +42,11 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Figure.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,55 +59,14 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animation.vb" />
-    <Compile Include="BitmapData.vb" />
-    <Compile Include="BitmapSerializeForm.Designer.vb">
-      <DependentUpon>BitmapSerializeForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BitmapSerializeForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BoundingBox.vb" />
-    <Compile Include="Camera.vb" />
-    <Compile Include="CollisionGraphic.vb" />
-    <Compile Include="DynamicGraphic.vb" />
-    <Compile Include="Engine.vb" />
-    <Compile Include="EngineRectangle.vb" />
-    <Compile Include="EngineThread.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FileSystem.vb" />
-    <Compile Include="GraphicType.vb" />
-    <Compile Include="ICollide.vb" />
-    <Compile Include="IDrawable.vb" />
-    <Compile Include="IGraphic.vb" />
-    <Compile Include="Input.vb" />
-    <Compile Include="IPhysicsObject.vb" />
-    <Compile Include="ISerialize.vb" />
-    <Compile Include="Json.vb" />
-    <Compile Include="LineLib.vb" />
-    <Compile Include="MainForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.vb">
-      <DependentUpon>MainForm.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MetaGraphic.vb" />
-    <Compile Include="MetaGraphicEditor.Designer.vb">
-      <DependentUpon>MetaGraphicEditor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MetaGraphicEditor.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="PropertyConverter.vb" />
+    <Compile Include="Vector.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -132,34 +82,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PropertyDialog.Designer.vb">
-      <DependentUpon>PropertyDialog.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PropertyDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SerializeBase.vb" />
-    <Compile Include="StaticGraphic.vb" />
-    <Compile Include="Vector.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BitmapSerializeForm.resx">
-      <DependentUpon>BitmapSerializeForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MetaGraphicEditor.resx">
-      <DependentUpon>MetaGraphicEditor.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PropertyDialog.resx">
-      <DependentUpon>PropertyDialog.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -172,13 +101,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Figure.ico" />
-    <None Include="Resources\RedDot.png" />
-    <None Include="Resources\OrangeDot.png" />
-    <None Include="Resources\Atari_8_bit_GTIA_NTSC_palette.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

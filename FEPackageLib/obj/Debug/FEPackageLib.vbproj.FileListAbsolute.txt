@@ -1,0 +1,10 @@
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\bin\Debug\FEPackageLib.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\bin\Debug\FEPackageLib.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\bin\Debug\FEPackageLib.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\obj\Debug\FEPackageLib.BundleBrowser.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\obj\Debug\FEPackageLib.Resources.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\obj\Debug\FEPackageLib.vbproj.GenerateResource.Cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\obj\Debug\FEPackageLib.vbproj.CoreCompileInputs.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\obj\Debug\FEPackageLib.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\obj\Debug\FEPackageLib.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEPackageLib\obj\Debug\FEPackageLib.pdb

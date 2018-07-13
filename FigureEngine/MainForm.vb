@@ -82,12 +82,12 @@ Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitViewport()
-
-        MetaGraphicEditor.ShowDialog()
-
-        PropertyDialog.EditObject = Me
-        PropertyDialog.ShowDialog()
-
+        '
+        'MetaGraphicEditor.ShowDialog()
+        '
+        'PropertyDialog.EditObject = Me
+        'PropertyDialog.ShowDialog()
+        '
         Dim eng As New Engine(Resolution.X, Resolution.Y)
         Layers.Add(Nothing)
         eng.AddObject(New StaticGraphic(My.Resources.DebugImage, New Point(0, 0)))
@@ -108,7 +108,7 @@ Public Class MainForm
         If Input.Query({Keys.A, Keys.Left}) Then
             Camera.MoveCamera(-1, 0)
         End If
-        If Input.Query({Keys.S, Keys.Right}) Then
+        If Input.Query({Keys.S, Keys.Down}) Then
             Camera.MoveCamera(0, -1)
         End If
         If Input.Query({Keys.D, Keys.Right}) Then

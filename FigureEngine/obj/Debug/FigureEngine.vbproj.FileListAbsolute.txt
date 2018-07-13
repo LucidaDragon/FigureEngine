@@ -26,3 +26,6 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\Figur
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.BitmapSerializeForm.resources
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.vbprojResolveAssemblyReference.cache
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.MetaGraphicEditor.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEPackageLib.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEPackageLib.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEPackageLib.xml

@@ -1,0 +1,10 @@
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\bin\Debug\FEForms.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\bin\Debug\FEForms.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\bin\Debug\FEForms.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.Resources.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.PropertyDialog.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.vbproj.GenerateResource.Cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.vbproj.CoreCompileInputs.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.pdb

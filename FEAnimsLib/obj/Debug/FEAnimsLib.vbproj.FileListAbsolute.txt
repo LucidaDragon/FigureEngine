@@ -1,0 +1,4 @@
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimsLib.vbprojResolveAssemblyReference.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimsLib.Resources.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimsLib.vbproj.GenerateResource.Cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimsLib.vbproj.CoreCompileInputs.cache

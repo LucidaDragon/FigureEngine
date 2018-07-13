@@ -1,0 +1,21 @@
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FigureEngine.exe.config
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FigureEngine.exe
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FigureEngine.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FigureEngine.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine Old.vbprojResolveAssemblyReference.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.BitmapSerializeForm.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.MainForm.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.MetaGraphicEditor.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.Resources.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.PropertyDialog.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine Old.vbproj.GenerateResource.Cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine Old.vbproj.CoreCompileInputs.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.exe
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\obj\Debug\FigureEngine.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEPackaging.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEBase.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEPackaging.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEPackaging.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEBase.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FigureEngine\bin\Debug\FEBase.xml
