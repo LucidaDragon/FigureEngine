@@ -11,3 +11,10 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnima
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.dll
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.xml
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEPackaging.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEPackaging.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEPackaging.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.FrameEditor.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms.dll
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms.xml

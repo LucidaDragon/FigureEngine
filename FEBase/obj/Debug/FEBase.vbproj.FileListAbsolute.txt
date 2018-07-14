@@ -7,3 +7,4 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.vbpr
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.dll
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.xml
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEBase\obj\Debug\FEBase.vbprojResolveAssemblyReference.cache

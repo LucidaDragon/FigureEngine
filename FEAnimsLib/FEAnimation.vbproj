@@ -46,6 +46,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,8 +66,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitmapData.vb" />
     <Compile Include="Bone.vb" />
     <Compile Include="Frame.vb" />
+    <Compile Include="FrameEditor.Designer.vb">
+      <DependentUpon>FrameEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moveset.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -83,6 +93,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrameEditor.resx">
+      <DependentUpon>FrameEditor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -106,6 +119,29 @@
       <Project>{f682f12a-a180-4c14-a7ec-c6926d3e4968}</Project>
       <Name>FEBase</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FEForms\FEForms.vbproj">
+      <Project>{6df51293-1430-4c2e-a53e-6f0298d14b6e}</Project>
+      <Name>FEForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FEPackageLib\FEPackaging.vbproj">
+      <Project>{f25914ae-f6fa-45e9-8615-b0c74a4ce3c6}</Project>
+      <Name>FEPackaging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransparencyCheckers.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

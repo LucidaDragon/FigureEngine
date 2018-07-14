@@ -10,10 +10,8 @@ Public Class DebugForm
         ' Perform debugging actions below, then run with FEDebug selected as the startup project.
         '
 
-        Dim dia As New PropertyDialog With {
-            .SelectedObject = New Package
-        }
-        dia.ShowDialog()
+        Dim frm As New FrameEditor
+        frm.ShowDialog()
 
         Close()
     End Sub

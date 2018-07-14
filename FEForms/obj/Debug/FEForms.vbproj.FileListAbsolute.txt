@@ -8,3 +8,6 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.vb
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.dll
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.xml
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.pdb
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.vbprojResolveAssemblyReference.cache
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.ProgressDialog.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEForms\obj\Debug\FEForms.SpriteSheetDialog.resources
