@@ -63,7 +63,7 @@ Partial Class SpriteSheetDialog
         Me.NumericWidth.Name = "NumericWidth"
         Me.NumericWidth.Size = New System.Drawing.Size(146, 20)
         Me.NumericWidth.TabIndex = 2
-        Me.NumericWidth.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumericWidth.Value = New Decimal(New Integer() {128, 0, 0, 0})
         '
         'NumericHeight
         '
@@ -75,7 +75,7 @@ Partial Class SpriteSheetDialog
         Me.NumericHeight.Name = "NumericHeight"
         Me.NumericHeight.Size = New System.Drawing.Size(146, 20)
         Me.NumericHeight.TabIndex = 3
-        Me.NumericHeight.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumericHeight.Value = New Decimal(New Integer() {128, 0, 0, 0})
         '
         'Label3
         '
@@ -96,7 +96,7 @@ Partial Class SpriteSheetDialog
         Me.NumericTileCount.Name = "NumericTileCount"
         Me.NumericTileCount.Size = New System.Drawing.Size(146, 20)
         Me.NumericTileCount.TabIndex = 5
-        Me.NumericTileCount.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumericTileCount.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'Button1
         '

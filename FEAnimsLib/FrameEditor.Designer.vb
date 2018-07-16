@@ -35,6 +35,7 @@ Partial Class FrameEditor
         Me.ExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.PlayerViewport = New System.Windows.Forms.PictureBox()
@@ -44,8 +45,11 @@ Partial Class FrameEditor
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.FrameSelector = New System.Windows.Forms.ListBox()
+        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
+        Me.MovesetPropertyGrid = New System.Windows.Forms.PropertyGrid()
         Me.FramePropertyGrid = New System.Windows.Forms.PropertyGrid()
         Me.PlayTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.FolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainToolStrip.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -57,12 +61,16 @@ Partial Class FrameEditor
         Me.SplitContainer2.SuspendLayout()
         CType(Me.PlayerViewport, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PlayerToolStrip.SuspendLayout()
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer3.Panel1.SuspendLayout()
+        Me.SplitContainer3.Panel2.SuspendLayout()
+        Me.SplitContainer3.SuspendLayout()
         Me.SuspendLayout()
         '
         'MainToolStrip
         '
         Me.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
+        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.ToolStripButton5})
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
         Me.MainToolStrip.Size = New System.Drawing.Size(811, 25)
@@ -82,55 +90,64 @@ Partial Class FrameEditor
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(107, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'ImportToolStripMenuItem
         '
-        Me.ImportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpriteSheetToolStripMenuItem})
+        Me.ImportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpriteSheetToolStripMenuItem, Me.FolderToolStripMenuItem})
         Me.ImportToolStripMenuItem.Name = "ImportToolStripMenuItem"
-        Me.ImportToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.ImportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ImportToolStripMenuItem.Text = "Import"
         '
         'SpriteSheetToolStripMenuItem
         '
         Me.SpriteSheetToolStripMenuItem.Name = "SpriteSheetToolStripMenuItem"
-        Me.SpriteSheetToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.SpriteSheetToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SpriteSheetToolStripMenuItem.Text = "Sprite Sheet"
         '
         'ExportToolStripMenuItem
         '
         Me.ExportToolStripMenuItem.Name = "ExportToolStripMenuItem"
-        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExportToolStripMenuItem.Text = "Export"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(107, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'ToolStripButton5
+        '
+        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
+        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton5.Name = "ToolStripButton5"
+        Me.ToolStripButton5.Size = New System.Drawing.Size(53, 22)
+        Me.ToolStripButton5.Text = "Settings"
         '
         'SplitContainer1
         '
@@ -144,7 +161,7 @@ Partial Class FrameEditor
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.FramePropertyGrid)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer3)
         Me.SplitContainer1.Size = New System.Drawing.Size(811, 531)
         Me.SplitContainer1.SplitterDistance = 270
         Me.SplitContainer1.TabIndex = 1
@@ -194,7 +211,7 @@ Partial Class FrameEditor
         'ToolStripButton1
         '
         Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.FEAnimation.My.Resources.Resources.previous
+        Me.ToolStripButton1.Image = Global.FEAnimation.My.Resources.Resources.previous_ico
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
@@ -203,7 +220,7 @@ Partial Class FrameEditor
         'ToolStripButton2
         '
         Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = Global.FEAnimation.My.Resources.Resources.pause
+        Me.ToolStripButton2.Image = Global.FEAnimation.My.Resources.Resources.pause_ico
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
         Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
@@ -212,7 +229,7 @@ Partial Class FrameEditor
         'ToolStripButton3
         '
         Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = Global.FEAnimation.My.Resources.Resources.forward
+        Me.ToolStripButton3.Image = Global.FEAnimation.My.Resources.Resources.forward_ico
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
         Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
@@ -221,7 +238,7 @@ Partial Class FrameEditor
         'ToolStripButton4
         '
         Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton4.Image = Global.FEAnimation.My.Resources.Resources._next
+        Me.ToolStripButton4.Image = Global.FEAnimation.My.Resources.Resources.next_ico
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
         Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
@@ -236,13 +253,48 @@ Partial Class FrameEditor
         Me.FrameSelector.Size = New System.Drawing.Size(270, 243)
         Me.FrameSelector.TabIndex = 0
         '
+        'SplitContainer3
+        '
+        Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer3.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer3.Name = "SplitContainer3"
+        Me.SplitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer3.Panel1
+        '
+        Me.SplitContainer3.Panel1.Controls.Add(Me.MovesetPropertyGrid)
+        '
+        'SplitContainer3.Panel2
+        '
+        Me.SplitContainer3.Panel2.Controls.Add(Me.FramePropertyGrid)
+        Me.SplitContainer3.Size = New System.Drawing.Size(537, 531)
+        Me.SplitContainer3.SplitterDistance = 264
+        Me.SplitContainer3.TabIndex = 1
+        '
+        'MovesetPropertyGrid
+        '
+        Me.MovesetPropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MovesetPropertyGrid.Location = New System.Drawing.Point(0, 0)
+        Me.MovesetPropertyGrid.Name = "MovesetPropertyGrid"
+        Me.MovesetPropertyGrid.Size = New System.Drawing.Size(537, 264)
+        Me.MovesetPropertyGrid.TabIndex = 0
+        '
         'FramePropertyGrid
         '
         Me.FramePropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FramePropertyGrid.Location = New System.Drawing.Point(0, 0)
         Me.FramePropertyGrid.Name = "FramePropertyGrid"
-        Me.FramePropertyGrid.Size = New System.Drawing.Size(537, 531)
+        Me.FramePropertyGrid.Size = New System.Drawing.Size(537, 263)
         Me.FramePropertyGrid.TabIndex = 0
+        '
+        'PlayTimer
+        '
+        '
+        'FolderToolStripMenuItem
+        '
+        Me.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem"
+        Me.FolderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FolderToolStripMenuItem.Text = "Folder"
         '
         'FrameEditor
         '
@@ -268,6 +320,10 @@ Partial Class FrameEditor
         CType(Me.PlayerViewport, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PlayerToolStrip.ResumeLayout(False)
         Me.PlayerToolStrip.PerformLayout()
+        Me.SplitContainer3.Panel1.ResumeLayout(False)
+        Me.SplitContainer3.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -295,4 +351,8 @@ Partial Class FrameEditor
     Friend WithEvents ExitToolStripMenuItem As Windows.Forms.ToolStripMenuItem
     Friend WithEvents FramePropertyGrid As Windows.Forms.PropertyGrid
     Friend WithEvents SpriteSheetToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SplitContainer3 As Windows.Forms.SplitContainer
+    Friend WithEvents MovesetPropertyGrid As Windows.Forms.PropertyGrid
+    Friend WithEvents ToolStripButton5 As Windows.Forms.ToolStripButton
+    Friend WithEvents FolderToolStripMenuItem As Windows.Forms.ToolStripMenuItem
 End Class

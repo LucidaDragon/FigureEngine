@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Drawing
+Imports System.IO
 Imports FEBase
 Imports FEPackaging
 
@@ -10,11 +11,11 @@ Public Class BitmapData
     Public Property Data As String
         Get
             If Image IsNot Nothing Then
-                Dim memStream As New IO.MemoryStream
+                Dim memStream As New MemoryStream
                 Try
                     Image.Save(memStream, Image.RawFormat)
                 Catch ex As Exception
-                    Image.Save(memStream, Imaging.ImageFormat.Bmp)
+                    Image.Save(memStream, Imaging.ImageFormat.Png)
                 End Try
                 Return Convert.ToBase64String(memStream.GetBuffer())
             Else
@@ -22,10 +23,7 @@ Public Class BitmapData
             End If
         End Get
         Set(value As String)
-            Dim memStream As New IO.MemoryStream
-            Dim arr As Byte() = Convert.FromBase64String(value)
-            memStream.Write(arr, 0, arr.Length)
-            Image = New Bitmap(memStream)
+            Image = Bitmap.FromStream(New MemoryStream(Convert.FromBase64String(value)))
         End Set
     End Property
     <Web.Script.Serialization.ScriptIgnore>
@@ -53,7 +51,7 @@ Public Class BitmapData
 
     Public Shared Widening Operator CType(img As Bitmap) As BitmapData
         Return New BitmapData With {
-            .Image = img
+            .Image = New Bitmap(img)
         }
     End Operator
 

@@ -29,7 +29,7 @@ Public Class SpriteSheetDialog
                 For x As Integer = 0 To NumericWidth.Value - 1
                     For y As Integer = 0 To NumericHeight.Value - 1
                         If xPos + x < img.Width And yPos + y < img.Height Then
-                            tile.SetPixel(xPos + x, yPos + y, img.GetPixel(xPos + x, yPos + y))
+                            tile.SetPixel(x, y, img.GetPixel(xPos + x, yPos + y))
                         Else
                             failCount += 1
                         End If
@@ -40,6 +40,7 @@ Public Class SpriteSheetDialog
                     xPos = 0
                     yPos += NumericHeight.Value
                 Else
+                    xPos += NumericWidth.Value
                     Tiles.Add(tile)
                 End If
 

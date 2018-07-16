@@ -5,4 +5,6 @@ Imports FEBase
 Public Class Moveset
     Public Property Name As String
     Public Property Frames As New List(Of Frame)
+    Public Property FrameDelay As Integer = 41
+    Public Property WieldTypes As New List(Of WieldType)
 End Class

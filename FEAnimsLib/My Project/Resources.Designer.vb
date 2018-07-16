@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property _next() As System.Drawing.Bitmap
+        Friend ReadOnly Property BlueChecker() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("next", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("BlueChecker", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -73,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property forward() As System.Drawing.Bitmap
+        Friend ReadOnly Property forward_ico() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("forward", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("forward_ico", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -83,9 +83,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property pause() As System.Drawing.Bitmap
+        Friend ReadOnly Property GreenChecker() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("pause", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("GreenChecker", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -93,9 +93,39 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property previous() As System.Drawing.Bitmap
+        Friend ReadOnly Property next_ico() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("previous", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("next_ico", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property OrangeChecker() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("OrangeChecker", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property pause_ico() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("pause_ico", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property previous_ico() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("previous_ico", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -18,3 +18,4 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnima
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms.dll
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms.pdb
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms.xml
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEAnimation.dll.config

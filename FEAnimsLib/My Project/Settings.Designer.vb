@@ -53,6 +53,42 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("5")>  _
+        Public Property EditorPointRadius() As Integer
+            Get
+                Return CType(Me("EditorPointRadius"),Integer)
+            End Get
+            Set
+                Me("EditorPointRadius") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property EditorVectorLength() As Integer
+            Get
+                Return CType(Me("EditorVectorLength"),Integer)
+            End Get
+            Set
+                Me("EditorVectorLength") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2")>  _
+        Public Property EditorVectorWidth() As Integer
+            Get
+                Return CType(Me("EditorVectorWidth"),Integer)
+            End Get
+            Set
+                Me("EditorVectorWidth") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -4,8 +4,14 @@ Imports FEBase
 
 <TypeConverter(GetType(PropertyConverter(Of Frame)))>
 Public Class Frame
-    Public Property Image As BitmapData
-    Public Property WeaponOrigin As Point
-    Public Property WeaponVector As Vector
-    Public Property Bones As List(Of Bone)
+    Public Property Image As New BitmapData With {
+        .Image = Nothing
+    }
+    Public Property RightWeaponOrigin As New Point
+    Public Property RightWeaponVector As New Vector
+    Public Property LeftWeaponOrigin As New Point
+    Public Property LeftWeaponVector As New Vector
+    Public Property HurtBoxes As New List(Of Rectangle)
+    Public Property HitBoxes As New List(Of Rectangle)
+    Public Property DamageScale As Double
 End Class

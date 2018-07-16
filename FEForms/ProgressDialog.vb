@@ -1,6 +1,8 @@
 ﻿Imports System.Windows.Forms
 
 Public Class ProgressDialog
+    Protected Shared Dialogs As New List(Of ProgressDialog)
+
     Public Property ProgressType As ProgressBarStyle
         Get
             Return ProgressBar.Style
@@ -27,6 +29,30 @@ Public Class ProgressDialog
             ProgressBar.Value = value
         End Set
     End Property
+
+    Sub New()
+        InitializeComponent()
+
+        Dialogs.Add(Me)
+    End Sub
+
+    Public Shared Sub CloseAll()
+        For Each dia In Dialogs
+            dia.ThreadClose()
+        Next
+        Dialogs.Clear()
+        GC.Collect()
+    End Sub
+
+    Public Sub ThreadClose()
+        If InvokeRequired Then
+            Invoke(Sub()
+                       Close()
+                   End Sub)
+        Else
+            Close()
+        End If
+    End Sub
 
     Public Sub UpdateProgress(progress As Double, Optional status As String = "")
         Me.Progress = progress * 100

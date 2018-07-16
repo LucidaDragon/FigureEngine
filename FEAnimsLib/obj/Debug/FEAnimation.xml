@@ -22,22 +22,37 @@ FEAnimation
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:FEAnimation.My.Resources.Resources._next">
+<member name="P:FEAnimation.My.Resources.Resources.BlueChecker">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:FEAnimation.My.Resources.Resources.forward">
+<member name="P:FEAnimation.My.Resources.Resources.forward_ico">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:FEAnimation.My.Resources.Resources.pause">
+<member name="P:FEAnimation.My.Resources.Resources.GreenChecker">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:FEAnimation.My.Resources.Resources.previous">
+<member name="P:FEAnimation.My.Resources.Resources.next_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FEAnimation.My.Resources.Resources.OrangeChecker">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FEAnimation.My.Resources.Resources.pause_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FEAnimation.My.Resources.Resources.previous_ico">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
