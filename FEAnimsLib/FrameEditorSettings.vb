@@ -4,15 +4,29 @@ Imports FEPackaging
 Public Class FrameEditorSettings
     Implements ISerialize
 
-    Public Property DrawFrameData As Boolean = True
+    <Category("Settings")>
+    Public Property DrawData As Boolean = True
+    <Category("Settings")>
     Public Property DataPointRadius As Integer = My.Settings.EditorPointRadius
+    <Category("Settings")>
     Public Property DataVectorLength As Integer = My.Settings.EditorVectorLength
-    Public Property DataVectorWidth As Integer = My.Settings.EditorVectorWidth
+    <Category("Settings")>
+    Public Property DataLineWidth As Integer = My.Settings.EditorVectorWidth
+    <Category("Settings")>
+    Public Property BackgroundType As EditorBackgroundType
+        Get
+            Return bkgrnd
+        End Get
+        Set(value As EditorBackgroundType)
+            bkgrnd = value
+        End Set
+    End Property
+    Private bkgrnd As EditorBackgroundType
 
     Public Sub Save()
         My.Settings.EditorPointRadius = DataPointRadius
         My.Settings.EditorVectorLength = DataVectorLength
-        My.Settings.EditorVectorWidth = DataVectorWidth
+        My.Settings.EditorVectorWidth = DataLineWidth
         My.Settings.Save()
     End Sub
 
@@ -32,4 +46,11 @@ Public Class FrameEditorSettings
     Public Function Deserialize(str As String) As ISerialize Implements ISerialize.Deserialize
         Return Json.Deserialize(Of FrameEditorSettings)(str)
     End Function
+
+    Public Enum EditorBackgroundType
+        Normal = 0
+        Red = 1
+        Green = 2
+        Blue = 3
+    End Enum
 End Class

@@ -19,3 +19,5 @@ C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms.pdb
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEForms.xml
 C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\bin\Debug\FEAnimation.dll.config
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.WeaponEditor.resources
+C:\Users\LucidaDragon\Documents\GitHub\FigureEngine\FEAnimsLib\obj\Debug\FEAnimation.DemoViewDialog.resources

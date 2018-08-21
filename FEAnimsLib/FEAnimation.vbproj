@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitmapData.vb" />
+    <Compile Include="DemoViewDialog.Designer.vb">
+      <DependentUpon>DemoViewDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DemoViewDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frame.vb" />
     <Compile Include="FrameAction.vb" />
     <Compile Include="FrameActionType.vb" />
@@ -93,9 +99,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Weapon.vb" />
+    <Compile Include="WeaponEditor.Designer.vb">
+      <DependentUpon>WeaponEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WeaponEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WieldType.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DemoViewDialog.resx">
+      <DependentUpon>DemoViewDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrameEditor.resx">
       <DependentUpon>FrameEditor.vb</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +120,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeaponEditor.resx">
+      <DependentUpon>WeaponEditor.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

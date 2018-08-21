@@ -8,6 +8,7 @@ Imports FEPackaging
 Public Class BitmapData
     Implements ISerialize
 
+    <Browsable(False)>
     Public Property Data As String
         Get
             If Image IsNot Nothing Then
@@ -29,6 +30,7 @@ Public Class BitmapData
     <Web.Script.Serialization.ScriptIgnore>
     Public Property Image As Bitmap
 
+    <Browsable(False)>
     Public Property FullName As String Implements ISerialize.FullName
         Get
             Return Me.GetType().FullName

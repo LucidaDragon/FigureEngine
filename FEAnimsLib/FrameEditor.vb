@@ -49,7 +49,10 @@ Public Class FrameEditor
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        Dim sfd As New SaveFileDialog
+        Dim sfd As New SaveFileDialog With {
+            .DefaultExt = "json",
+            .Filter = "Javascript Object Notation File (*.json)|*.json"
+        }
         If sfd.ShowDialog() = DialogResult.OK Then
             Dim thrd As New Thread(Sub()
                                        Dim prog As New ProgressDialog With {
@@ -75,6 +78,15 @@ Public Class FrameEditor
     Public Sub RefreshUI()
         If Not Refreshing Then
             Refreshing = True
+            If EditorSettings.BackgroundType = FrameEditorSettings.EditorBackgroundType.Red Then
+                SplitContainer2.Panel1.BackgroundImage = My.Resources.OrangeChecker
+            ElseIf EditorSettings.BackgroundType = FrameEditorSettings.EditorBackgroundType.Green Then
+                SplitContainer2.Panel1.BackgroundImage = My.Resources.GreenChecker
+            ElseIf EditorSettings.BackgroundType = FrameEditorSettings.EditorBackgroundType.Blue Then
+                SplitContainer2.Panel1.BackgroundImage = My.Resources.BlueChecker
+            Else
+                SplitContainer2.Panel1.BackgroundImage = My.Resources.TransparencyCheckers
+            End If
             MovesetPropertyGrid.SelectedObject = LoadedMoveset
             PlayTimer.Interval = LoadedMoveset.FrameDelay
             If SelectedFrame < LoadedMoveset.Frames.Count And SelectedFrame >= 0 Then
@@ -98,7 +110,10 @@ Public Class FrameEditor
     End Sub
 
     Public Sub UpdateViewport()
-        PlayerViewport.Image = FrameOverlay(LoadedMoveset.Frames(SelectedFrame), EditorSettings.DrawFrameData)
+        If PlayerViewport.Image IsNot Nothing Then
+            PlayerViewport.Image.Dispose()
+        End If
+        PlayerViewport.Image = FrameOverlay(LoadedMoveset.Frames(SelectedFrame), EditorSettings.DrawData)
         PlayerViewport.Invalidate()
     End Sub
 
@@ -143,20 +158,38 @@ Public Class FrameEditor
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         SelectedFrame = 0
+        RefreshUI()
     End Sub
 
     Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
         SelectedFrame = LoadedMoveset.Frames.Count - 1
+        RefreshUI()
     End Sub
 
     Private Function FrameOverlay(frame As Frame, show As Boolean) As Bitmap
         If show Then
             Dim copy As Bitmap = frame.Image.Image.Clone()
-            Dim g As Graphics = Graphics.FromImage(copy)
-            g.FillEllipse(New TextureBrush(My.Resources.BlueChecker), New Rectangle(frame.LeftWeaponOrigin + New Vector(CDbl(EditorSettings.DataPointRadius * -1), CDbl(EditorSettings.DataPointRadius * -1)), New Point(EditorSettings.DataPointRadius * 2, EditorSettings.DataPointRadius * 2)))
-            g.FillEllipse(New TextureBrush(My.Resources.BlueChecker), New Rectangle(frame.RightWeaponOrigin + New Vector(CDbl(EditorSettings.DataPointRadius * -1), CDbl(EditorSettings.DataPointRadius * -1)), New Point(EditorSettings.DataPointRadius * 2, EditorSettings.DataPointRadius * 2)))
-            g.DrawLine(New Pen(New TextureBrush(My.Resources.GreenChecker), EditorSettings.DataVectorWidth), frame.LeftWeaponOrigin, frame.LeftWeaponOrigin + (frame.LeftWeaponVector * EditorSettings.DataVectorLength))
-            g.DrawLine(New Pen(New TextureBrush(My.Resources.GreenChecker), EditorSettings.DataVectorWidth), frame.RightWeaponOrigin, frame.RightWeaponOrigin + (frame.RightWeaponVector * EditorSettings.DataVectorLength))
+            Using g As Graphics = Graphics.FromImage(copy)
+                Using tex As TextureBrush = New TextureBrush(My.Resources.BlueChecker)
+                    g.FillEllipse(tex, New Rectangle(frame.LeftWeaponOrigin + New Vector(CDbl(EditorSettings.DataPointRadius * -1), CDbl(EditorSettings.DataPointRadius * -1)), New Point(EditorSettings.DataPointRadius * 2, EditorSettings.DataPointRadius * 2)))
+                    g.FillEllipse(tex, New Rectangle(frame.RightWeaponOrigin + New Vector(CDbl(EditorSettings.DataPointRadius * -1), CDbl(EditorSettings.DataPointRadius * -1)), New Point(EditorSettings.DataPointRadius * 2, EditorSettings.DataPointRadius * 2)))
+                End Using
+                Using pen As Pen = New Pen(New TextureBrush(My.Resources.GreenChecker), EditorSettings.DataLineWidth)
+                    If frame.HurtBoxes.Count > 0 Then
+                        g.DrawRectangles(pen, frame.HurtBoxes.ToArray())
+                    End If
+                End Using
+                Using pen As Pen = New Pen(New TextureBrush(My.Resources.OrangeChecker), EditorSettings.DataLineWidth)
+                    If frame.HitBoxes.Count > 0 Then
+                        g.DrawRectangles(pen, frame.HurtBoxes.ToArray())
+                    End If
+                End Using
+                Using pen As Pen = New Pen(Color.Purple, EditorSettings.DataLineWidth)
+                    g.DrawLine(pen, frame.LeftWeaponOrigin, frame.LeftWeaponOrigin + (frame.LeftWeaponVector * EditorSettings.DataVectorLength))
+                    g.DrawLine(pen, frame.RightWeaponOrigin, frame.RightWeaponOrigin + (frame.RightWeaponVector * EditorSettings.DataVectorLength))
+                End Using
+                g.Flush()
+            End Using
             Return copy
         Else
             Return frame.Image.Image.Clone()
@@ -173,6 +206,7 @@ Public Class FrameEditor
             .Text = "Frame Editor Settings"
         }
         propDia.ShowDialog()
+        RefreshUI()
     End Sub
 
     Private Sub FramePropertyGrid_PropertyValueChanged(s As Object, e As PropertyValueChangedEventArgs) Handles FramePropertyGrid.PropertyValueChanged
